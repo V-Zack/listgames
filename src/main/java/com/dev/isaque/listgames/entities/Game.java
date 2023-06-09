@@ -6,13 +6,17 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
 @Entity
 @Table(name = "tb_game") 
+@RequiredArgsConstructor // esta anotation substitui o construtor vazio, sem argumentos.
+@AllArgsConstructor // esta anotation substitui o construtor com argumentos.
 public class Game {
 
 	
@@ -34,21 +38,6 @@ public class Game {
 	@Column(columnDefinition = "TEXT")
 	private String longDescription;
 	
-	public Game () {
-	}
-	
-	public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
-			String shortDescription, String longDescription) {
-		this.id = id;
-		this.title = title;
-		this.year = year;
-		this.genre = genre;
-		this.platforms = platforms;
-		this.score = score;
-		this.imgUrl = imgUrl; 
-		this.shortDescription = shortDescription;
-		this.longDescription = longDescription;
-	}
-	
+
 
 }
