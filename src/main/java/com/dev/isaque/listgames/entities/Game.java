@@ -7,16 +7,19 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
-@Entity
-@Table(name = "tb_game") 
 @RequiredArgsConstructor // esta anotation substitui o construtor vazio, sem argumentos.
 @AllArgsConstructor // esta anotation substitui o construtor com argumentos.
+
+@Entity
+@Table(name = "tb_game") 
+@EqualsAndHashCode
 public class Game {
 
 	
