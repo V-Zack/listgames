@@ -4,8 +4,10 @@ package com.dev.isaque.listgames.dto;
 import com.dev.isaque.listgames.entities.Game;
 
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
 @Getter
+@RequiredArgsConstructor
 public class GameMinDTO {
 	
 	private Long id;
@@ -14,9 +16,7 @@ public class GameMinDTO {
 	private String imgUrl;
 	private String shortDescription;
  
-	public GameMinDTO () {
-		
-	}
+	//construtor vazio foi suprimido pela anotation, @RequiredArgsConstructor
 
 	public GameMinDTO(Game entity) {
 		id = entity.getId();

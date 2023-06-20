@@ -10,7 +10,7 @@ import lombok.Setter;
 
 @Getter 
 @Setter
-//@AllArgsConstructor
+@AllArgsConstructor
 @RequiredArgsConstructor
 public class GameDTO {
 	
@@ -24,7 +24,8 @@ public class GameDTO {
 	private String shortDescription;
 	private String longDescription;
 	
-    //construtor vazio foi suprimido pela anotation @RequiredArgsConstructor 
+    //construtor vazio foi suprimido pela anotation, @RequiredArgsConstructor 
+	
 	
 	
     public GameDTO(Game entity) {
